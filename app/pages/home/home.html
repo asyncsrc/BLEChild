@@ -1,0 +1,28 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Stay By Me
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-list>
+    <ion-item *ngFor="let device of foundDevices" (click)="connectDevice(device.id)">
+      <ion-icon name="pulse" item-left></ion-icon>
+      {{device.name}}
+      <ion-note item-right>
+        {{device.rssi}}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+  <!--
+  <ion-card>
+    <ion-card-header>
+      Battery Level
+    </ion-card-header>
+    <ion-card-content>
+      {{ batteryLevel }}
+    </ion-card-content>
+  </ion-card>
+  -->
+</ion-content>
